@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    background-color: #0F2B46;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(15, 43, 70, 1.0);
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: space-between; 
+    align-items: center;
+   
+    width: 100%;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.nav-link{
+    
+    font-family: Arial, sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+.nav-link:hover {
+    background-color: white;
+    color: #D87720;
+}
+
+
+.job-form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); 
+
+}
+.form-first-half{
+     width: 50%;
+    height: auto;
+    background-color: #E6EEF3;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+

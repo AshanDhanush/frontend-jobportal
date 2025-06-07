@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    background-color: #0F2B46;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(15, 43, 70, 1.0);
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: space-between; 
+    align-items: center;
+   
+    width: 100%;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.nav-link{
+    
+    font-family: Arial, sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+.nav-link:hover {
+    background-color: white;
+    color: #D87720;
+}
+.card {
+  transition: transform 0.2s ease-in-out;
+  
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+footer {
+    background-color: #0d2a4d;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    top: 60px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #f8d568;
+}
+.registration-company-body{
+    background-image: url("../Images/create\ the\ image\ of\ .png");
+    
+}
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); 
+}
+.add-company-form{
+    width: 50%;
+    height: auto;
+    background-color: #E6EEF3;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+}

@@ -82,3 +82,18 @@ footer a:hover {
     border-radius: 10px;
     
 }
+.box-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); 
+}
+.information-box{
+     width: 50%;
+    height: auto;
+    background-color: #E6EEF3;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}

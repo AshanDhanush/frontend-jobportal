@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="card-text">${job.description ?? "No Description"}</p>
             <a href="#" class="card-link">Salary: $${job.salary?.toLocaleString() ?? "N/A"}</a><br>
             <small class="text-muted">Salary Date: ${job.salary_date ?? "N/A"}</small>
+            <br>
+            <a href="#" class="card-link">Apply</a>
           </div>
         `;
 

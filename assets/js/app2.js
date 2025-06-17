@@ -6,7 +6,16 @@ let txtJobsalarydate = document.getElementById("exampleInputsalaryDate");
 let btnSubmit =  document.getElementById("btn-submit").addEventListener("click" , btnSubmitOnclick);
 
 function btnSubmitOnclick(){
-    let requestBody = {
+    if(
+        txtJobTittle.value.trim() === "" ||
+        txtJobDescription.value.trim() === "" ||
+        txtJobsalary.value.trim() === "" ||
+        txtJobsalarydate.value.trim() === ""
+    ){
+         alert("Enter the all data!");
+    }
+    else{
+        let requestBody = {
         "job_id" : " ",
         "title" : txtJobTittle.value,
         "description" : txtJobDescription.value,
@@ -27,8 +36,12 @@ function btnSubmitOnclick(){
     })
      alert("Job Add Successful.");
    
+    }
+    
     
     
 }
+
+
 
 

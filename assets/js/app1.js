@@ -3,19 +3,30 @@ console.log("Hello");
 let txtCompanyName = document.getElementById("exampleInputname");
 let txtCompanyLoaction = document.getElementById("exampleInputLocation");
 let txtCompanyIndustry = document.getElementById("exampleInputIndustry1");
+let txtCompanyPassword = document.getElementById("exampleInputPassword");
 console.log(txtCompanyName.value);
 
 let btnSubmit =  document.getElementById("submit-btn").addEventListener("click" , btnSubmitOnclick);
 
 function btnSubmitOnclick(){
 
-    const isChecked = document.getElementById('exampleCheck1').checked;
+     if (
+        txtCompanyName.value.trim() === "" ||
+        txtCompanyLoaction.value.trim() === "" ||
+        txtCompanyPassword.value.trim() === "" ||
+        txtCompanyIndustry.value.trim() === ""
+    ) {
+        alert("Enter the data!");
+    }
+    else {
+         const isChecked = document.getElementById('exampleCheck1').checked;
 
     if(isChecked){
       let requestBody = {
         "name" : txtCompanyName.value,
         "location" : txtCompanyLoaction.value,
-        "industry" : txtCompanyIndustry.value
+        "industry" : txtCompanyIndustry.value,
+        "password" : txtCompanyPassword.value
     };
     
     fetch("http://localhost:8080/add/company",{
@@ -33,9 +44,15 @@ function btnSubmitOnclick(){
     alert("Company Add Successful.");
     console.log(txtCompanyIndustry.value);
     }
+   
     else{
         alert("Please put the tip !")
     }
+    }
+
+   
+
+   
     
     
 }
@@ -48,7 +65,17 @@ let txtApplicantEmail = document.getElementById("exampleInputEmail");
 
 function btnSubmitApplicantOnclick(){
 
-    const isChecked = document.getElementById('exampleCheck2').checked;
+    if(
+        txtApplicantName.value.trim() === "" ||
+        txtApplicantNic.value.trim() === "" ||
+        txtApplicantEmail.value.trim() === ""
+    ){
+        alert("Enter the data!");
+    }
+
+    else{
+
+        const isChecked = document.getElementById('exampleCheck2').checked;
 
     if(isChecked){
       let requestBody = {
@@ -57,7 +84,7 @@ function btnSubmitApplicantOnclick(){
         "Email" : txtApplicantEmail.value
     };
     
-    fetch("http://localhost:8080/add/company",{
+    fetch("http://localhost:8080/add/Applicant",{
 
         method:"POST",
         body:JSON.stringify(requestBody),
@@ -75,6 +102,10 @@ function btnSubmitApplicantOnclick(){
     else{
         alert("Please put the tip !")
     }
+
+    }
+
+    
     
     
 }
